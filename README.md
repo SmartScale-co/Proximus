@@ -1,9 +1,9 @@
-Proximus - Proximity Oracle for M&A Deal Rooms and Verical Index Scores
+Proximus -- Proximity Oracle for M&A Deal Rooms and Verical Index Scores
 by Smartmarkets.ai · a SmartScale.co product
 
 Proximus already knew the answer.
 
-Proximus is a precomputed proximity oracle. It answers questions about proximate residents, catchment netowks, and competitive footprint for every US location address — instantly, from federal data, with 100% census coverage and no modeling assumptions.
+Proximus is a precomputed proximity oracle. It answers questions about proximate residents, catchment netowks, and competitive footprint for every US location address -- instantly, from federal data, with 100% census coverage and no modeling assumptions.
 
 Not a map. Not a dashboard. Not a search engine.
 It is an oracle: you ask, it answers from precomputed truth.
@@ -13,9 +13,9 @@ Given any US address, coordinate, or Bank Holding Company (BHC) group ID, Proxim
 
 Who lives nearest to a location or branch network (proximate residents catchment)
 
-Competitive footprint - how your catchment fits, like a puzzle, with every competitor's
+Competitive footprint -- how your catchment fits, like a puzzle, with every competitor's
 
-Accretion score - how an acquisition target's catchment is accretive to your footprint
+Accretion score -- how an acquisition target's catchment is accretive to your footprint
 
 Example Index score: Bypass burden - for hospital access, the extra miles a resident travels past rural care to reach urban care
 
@@ -24,7 +24,7 @@ Every answer traces to public federal sources: FDIC Sites and Summary of Deposit
 text
 answer_source: precomputed_not_generated
 Live Demo
-Try the 7110 oracle — nearest hospital from any US coordinate, 100% coverage:
+Try the 7110 oracle -- nearest hospital from any US coordinate, 100% coverage:
 
 bash
 curl "https://proximustools.com/oracles/7110/distance_to_nearest_hospital\
@@ -59,16 +59,7 @@ Open smartmarkets.ai/proximus and help me understand
 my BHC's competitive footprint.
 Computer reads the oracle orientation page, forms the correct URLs, fetches your data, and narrates the answers in deal-room language. No SQL. No GIS. No dashboard to learn.
 
-Option 2 — Direct API (for technical teams)
-bash
-# Free demo — 7110 hospital access, any US coordinate
-curl "https://proximustools.com/oracles/7110/distance_to_nearest_hospital\
-?lat={LAT}&lon={LON}&key=free-demo"
-
-# Paid — BHC competitive catchment
-curl "https://proximustools.com/oracles/7160/catchment_hospitals/050093\
-?key={YOUR_API_KEY}"
-Option 3 — MCP (coming soon)
+Option 2 -- MCP (coming soon)
 Proximus will be registered as an MCP-native oracle at:
 
 text
@@ -89,9 +80,9 @@ URL	What it answers
 /oracles/{series}/methodology	Full methodology in markdown (paid tier)
 Orientation pages for humans and agents:
 
-smartmarkets.ai/proximus — M&A catchment vertical
+smartmarkets.ai/proximus -- M&A catchment vertical
 
-smartmarkets.ai/proxindex — scored index vertical
+smartmarkets.ai/proxindex -- scored index vertical
 
 API Keys
 Key	Access	How to get
@@ -109,20 +100,20 @@ Results are reproducible and auditable from public sources.
 
 Architecture
 text
-smartmarkets.ai          — human entry point (Vercel / Next.js)
-  /proximus              — M&A oracle orientation page
-  /proxindex             — scored index orientation page
-  /research/{slug}       — white paper series
+smartmarkets.ai          -- human entry point (Vercel / Next.js)
+  /proximus              -- M&A oracle orientation page
+  /proxindex             -- scored index orientation page
+  /research/{slug}       -- white paper series
 
-proximustools.com        — oracle surface (Railway / FastAPI)
-  /oracles/{series}/...  — all callable endpoints
-  /oracles/{series}/docs — endpoint documentation (markdown)
+proximustools.com        -- oracle surface (Railway / FastAPI)
+  /oracles/{series}/...  -- all callable endpoints
+  /oracles/{series}/docs -- endpoint documentation (json-markdown)
 Held by SmartScale.co LLC · Inquiries: neo@smartmarkets.ai
 
 Status
 Pre-client. Actively developed. Banking M&A vertical (8140) in build.
 White paper series launching Q2 2026 — scoring past BHC acquisitions
-against Proximus catchment data.
+against Proximus proximate_residents_catchment data.
 
 If you are a VP of M&A, Corporate Development, or Strategy at a bank
 or hospital system — start here.
